@@ -152,20 +152,18 @@ product
 
     ul {
       .col-no-pad;
+      @media @bp-m{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     li {
+      margin: 0 1%;
       display: inline-block;
       vertical-align: top;
-
-      @media @bp-m{
-        width: 24.5%;
-
-        text-align: center;
-      }
-      @media @bp-l{
-        width: 19.5%;
-      }
     }
 
     img {

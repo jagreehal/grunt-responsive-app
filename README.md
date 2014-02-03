@@ -29,3 +29,4 @@ grunt-responsive-app
 	* grunt-browser-sync
 * v0.0.11 - PROBLEM: I need a flexible grid (without a framework!). SOLUTION: Grids don't overthink it! Also mixin for REM, debug and normalize
 * v0.0.12 - PROBLEM: Get on with creating the product page!. SOLUTION: Add boilerplate code for product
+* v0.0.13 - PROBLEM: What about related items!. SOLUTION: Added related item using flex wrap (Firefox v28) to so autoprefixer in action.
