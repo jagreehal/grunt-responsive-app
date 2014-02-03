@@ -5,6 +5,16 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		directories: {app: 'app', dist: 'dist'},
 		config: grunt.file.readJSON('config.json'),
+		autoprefixer: {
+			options: {
+				browsers: ['last 10 version']
+			},
+			prefix: {
+				files: {
+					'<%= directories.app %>/styles/style.css': '<%= directories.app %>/styles/style.css'
+				}
+			}
+		},
 		bump: {
 			options: {
 				commitFiles: ['-a'],
@@ -56,7 +66,7 @@ module.exports = function(grunt){
 			grunt: { files: ['Gruntfile.js'] },
 			less: {
 				files: ['<%= directories.app %>/styles/**/*.less'],
-				tasks: ['less','cmq'] // only for demo purposes don't cmq after every change!
+				tasks: ['less','autoprefixer']
 			},
 			livereload: {
 				options: {
@@ -70,5 +80,5 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('default', ['jshint', 'less', 'cmq', 'connect', 'watch']);
+	grunt.registerTask('default', ['jshint', 'less', 'cmq','autoprefixer', 'connect', 'watch']);
 };

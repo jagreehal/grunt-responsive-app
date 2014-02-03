@@ -6,11 +6,25 @@
   box-sizing: border-box;
 }
 
+/*
+FLEX BOX MIXIN!
+
+.flex-display(@display: flex) {
+	display: ~"-webkit-@{display}";
+	display: ~"-moz-@{display}";
+	display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+	display: ~"-ms-@{display}"; // IE11
+	display: @display;
+}
+*/
+
+
 .box {
   width: 100%;
   height: 200px;
   float: left;
   display: flex;
+  //.flex-display;
   justify-content: center;
   align-items: center;
   font-size: 30px;

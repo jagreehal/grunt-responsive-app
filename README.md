@@ -22,3 +22,5 @@ grunt-responsive-app
 	* grunt-contrib-less
 * v0.0.7 - PROBLEM: embedding media queries bloats CSS. SOLUTION: Combine them together!
 	* grunt-combine-media-queries
+* v0.0.8 - PROBLEM: Vendor prefixes. Need a mix-in alternative.
+	* grunt-autoprefixer
