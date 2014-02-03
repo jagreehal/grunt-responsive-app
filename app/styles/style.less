@@ -1,6 +1,11 @@
+@bp-s: ~"only screen and (min-width: 480px)";
+@bp-m: ~"only screen and (min-width: 768px)";
+@bp-l: ~"only screen and (min-width: 1024px)";
+
 * {
   box-sizing: border-box;
 }
+
 .box {
   width: 100%;
   height: 200px;
@@ -10,24 +15,23 @@
   align-items: center;
   font-size: 30px;
   color: #FFF;
-}
-@media only screen and (min-width: 480px) {
-  .box {
+  @media @bp-s{
     width: 33%;
     color: #7FDBFF;
   }
-}
-@media only screen and (min-width: 1024px) {
-  .box {
+  @media @bp-l{
     color: #111;
   }
 }
+
 .red {
   background-color: #FF4136;
 }
+
 .orange {
   background-color: #FF851B;
 }
+
 .green {
   background-color: #2ECC40;
 }

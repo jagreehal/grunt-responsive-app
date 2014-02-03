@@ -35,8 +35,19 @@ module.exports = function(grunt){
 				'Gruntfile.js'
 			]
 		},
+		less: {
+			compile: {
+				files: {
+					'<%= directories.app %>/styles/style.css': '<%= directories.app %>/styles/style.less'
+				}
+			}
+		},
 		watch: {
 			grunt: { files: ['Gruntfile.js'] },
+			less: {
+				files: ['<%= directories.app %>/styles/**/*.less'],
+				tasks: ['less']
+			},
 			livereload: {
 				options: {
 					livereload: '<%= config.livereload %>'
@@ -49,5 +60,5 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('default', ['jshint', 'connect', 'watch']);
+	grunt.registerTask('default', ['jshint', 'less', 'connect', 'watch']);
 };

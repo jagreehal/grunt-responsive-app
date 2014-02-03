@@ -18,3 +18,5 @@ grunt-responsive-app
 	
 * v0.0.4 - PROBLEM: need to sync CSS across devices
 * v0.0.5 - PROBLEM: want responsive boxes full width 'mobile' otherwise single row 
+* v0.0.6 - PROBLEM: having to repeat breakpoints. SOLUTION: Use LESS variables
+	* grunt-contrib-less
