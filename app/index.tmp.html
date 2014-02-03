@@ -8,9 +8,71 @@
     <link rel="stylesheet" href="styles/style.css"/>
 </head>
 <body>
-<div class="box col-1 col-m-1-of-3 red">1</div>
-<div class="box col-1 col-m-1-of-3 orange">2</div>
-<div class="box col-1 col-m-1-of-3 green">3</div>
+<div class="row site-title">
+    <header class="col-1"><h1 class="icon-lightning">Socket Shopper</h1></header>
+</div>
+<div class="product">
+    <div class="row">
+        <header class="header col-1">
+            <h1 class="name">Supergirl T-shirt</h1>
+        </header>
+        <div class="row">
+            <div class="images col-1 col-m-1-of-2">
+                <figure class="image col-1">
+                    <img src="http://placehold.it/597x519">
+                </figure>
+                <ul class="thumbnails col-1">
+                    <li><a href=""><img src="http://placehold.it/73x73"></a></li>
+                    <li><a href=""><img src="http://placehold.it/73x73"></a></li>
+                    <li><a href=""><img src="http://placehold.it/73x73"></a></li>
+                </ul>
+            </div>
+            <div class="col-1 col-m-1-of-2">
+                <div class="col-1">
+                    <strong class="price">$23</strong>
+
+                    <div class="average-review">
+                        <ol class="rating">
+                            <li class="icon-heart2"></li>
+                            <li class="icon-heart2"></li>
+                            <li class="icon-heart2"></li>
+                            <li class="icon-heart2"></li>
+                            <li class="icon-heart"></li>
+                        </ol>
+                        <a href="#reviews" class="count">8 Reviews</a>
+                    </div>
+                </div>
+                <div class="description col-1">
+                    <p>Supergirl is a fictional character, a superhero featuring in comic books published by DC
+                        Comics.</p>
+
+                    <p>She was created by writer Otto Binder and designed by artist Al Plastino in 1959. She first
+                        appeared in the Action Comics comic book series and later branched out into animation, film,
+                        television, and merchandising</p>
+                </div>
+                <form method="post" action="#" class="form col-1">
+                    <div class="col-1">
+                        <label class="col-1 col-m-1-of-4" for="qty">Qty</label>
+                        <input class="col-1 col-m-3-of-4" name="qty" id="qty" pattern="[0-9]*" value="1" min="1"
+                               max="999"/>
+                    </div>
+                    <div class="col-1">
+                        <label class="col-1 col-m-1-of-4" for="size">Size</label>
+                        <select class="col-1 col-m-3-of-4" id="size" name="size">
+                            <option value="S">S</option>
+                            <option value="S">M</option>
+                            <option value="S">L</option>
+                            <option value="S">XL</option>
+                        </select>
+                    </div>
+                    <div class="col-1 button">
+                        <button class="add-to-cart icon-cart" type="submit">ADD TO CART</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <%=browserSyncScripts%>
 </body>
 </html>
