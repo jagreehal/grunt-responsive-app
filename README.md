@@ -17,3 +17,4 @@ grunt-responsive-app
 	* grunt-contrib-watch
 	
 * v0.0.4 - PROBLEM: need to sync CSS across devices
+* v0.0.5 - PROBLEM: want responsive boxes full width 'mobile' otherwise single row 

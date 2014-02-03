@@ -1,4 +1,39 @@
-body{
-    font-size:30em;
-    color:green;
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    height: 200px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color:#FFF;
+}
+
+.red {
+    background-color: #FF4136;
+}
+
+.orange {
+    background-color: #FF851B;
+}
+
+.green {
+    background-color: #2ECC40;
+}
+
+@media only screen and (min-width: 480px) {
+    .box {
+        width: 33%;
+        color:#7FDBFF;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .box {
+        color:#111;
+    }
 }
