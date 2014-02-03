@@ -74,8 +74,6 @@ product
     .line-height(18px);
   }
 
-
-
   .button {
     padding: 0;
     .margin-top(16px);
@@ -231,6 +229,19 @@ product
 
 .map {
   #map-canvas {
+    display: none;
     height: 320px;
+  }
+  #show-map-button {
+    .bg-orange;
+    width: 100%;
+    .padding(10px);
+    .font-size(16px);
+    border: none;
+    background-position: 5%;
+
+    @media @bp-l{
+      .font-size(20px);
+    }
   }
 }

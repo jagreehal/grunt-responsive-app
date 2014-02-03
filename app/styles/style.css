@@ -866,7 +866,19 @@ product
 }
 
 .map #map-canvas {
+	display: none;
 	height: 320px;
+}
+
+.map #show-map-button {
+	background-color: #ff851b;
+	width: 100%;
+	padding: 10px;
+	padding: 1rem;
+	font-size: 16px;
+	font-size: 1.6rem;
+	border: none;
+	background-position: 5%;
 }
 
 @media only screen and (min-width: 480px) {
@@ -974,6 +986,11 @@ body:after {
 
 .product .images .image {
 	float: right;
+}
+
+.map #show-map-button {
+	font-size: 20px;
+	font-size: 2rem;
 }
 
 }

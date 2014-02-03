@@ -21,3 +21,9 @@ function loadMap(){
 		'callback=initialize';
 	document.body.appendChild(script);
 }
+
+document.getElementById('show-map-button').addEventListener('click', function(){
+	this.style.display='none';
+	document.getElementById('map-canvas').style.display='block';
+	loadMap();
+});

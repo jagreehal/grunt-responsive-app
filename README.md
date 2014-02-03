@@ -61,3 +61,4 @@ grunt-responsive-app
 	* use echo.js
 * v0.0.25 - PROBLEM: I want to add google maps for find us. 
 * v0.0.26 - PROBLEM: Google maps is blocking! Load it async!
+* v0.0.27 - PROBLEM: Google maps is wasting resources. SOLUTION: Only load when required.
