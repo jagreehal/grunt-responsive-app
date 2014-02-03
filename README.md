@@ -33,3 +33,4 @@ grunt-responsive-app
 * v0.0.14 - PROBLEM: What about reviews!. SOLUTION: Added reviews.
 * v0.0.15 - PROBLEM: I want to use icons!. SOLUTION: Grunticon!
 	* grunt-grunticon	 
+* v0.0.16 - PROBLEM: I want images... responsive ones!	* grunt-responsive-images

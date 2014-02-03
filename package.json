@@ -1,6 +1,6 @@
 {
 	"name": "grunt-responsive-app",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"description": "How to build a responsive web app using Grunt",
 	"main": "index.js",
 	"scripts": {
@@ -30,6 +30,7 @@
 		"grunt-combine-media-queries": "~1.0.9",
 		"grunt-autoprefixer": "~0.6.5",
 		"grunt-browser-sync": "~0.5.3",
-		"grunt-grunticon": "~1.0.0-beta.0"
+		"grunt-grunticon": "~1.0.0-beta.0",
+		"grunt-responsive-images": "~0.1.1"
 	}
 }

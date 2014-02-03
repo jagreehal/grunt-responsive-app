@@ -93,15 +93,39 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		responsive_images: {
+			options: {
+				sizes: [
+					{
+						name: 'small',
+						width: 320
+					},
+					{
+						name: 'medium',
+						width: 640
+					},
+					{
+						name: 'large',
+						width: 960
+					}
+				]
+			},
+			files: {
+				expand: true,
+				cwd: '<%= directories.app %>/images/products/main-src',
+				src: '*.{jpg,gif,png}',
+				dest: '<%= directories.app %>/images/products/main'
+			}
+		},
 		watch: {
 			grunt: { files: ['Gruntfile.js'] },
-			html:{
+			html: {
 				files: ['<%= directories.app %>/index.tmp.html'],
-				tasks:['injectBrowserSync:dev']
+				tasks: ['injectBrowserSync:dev']
 			},
 			less: {
 				files: ['<%= directories.app %>/styles/**/*.less'],
-				tasks: ['less','autoprefixer']
+				tasks: ['less', 'autoprefixer']
 			},
 			livereload: {
 				options: {
@@ -120,5 +144,5 @@ module.exports = function(grunt){
 		grunt.file.write('app/index.html', output);
 	});
 
-	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer','grunticon', 'connect', 'browser_sync', 'watch']);
+	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'grunticon', 'connect', 'browser_sync', 'watch']);
 };

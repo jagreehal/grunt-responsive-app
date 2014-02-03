@@ -35,12 +35,20 @@
     <div class="row">
         <div class="images col-1 col-m-1-of-2">
             <figure class="image col-1">
-                <img src="http://placehold.it/597x519">
+                <span data-picture data-alt="Supergirl T-shirt">
+                  <span data-src="images/products/main/P1-main1-small.jpg"></span>
+                  <span data-src="images/products/main/P1-main1-medium.jpg"
+                        data-media="(min-width: 768px)"></span>
+                  <span data-src="images/products/main/P1-main1-large.jpg"
+                        data-media="(min-width: 960px)"></span>
+                  <noscript><img src="images/products/main/P1-main1-small.jpg" alt="Supergirl T-shirt">
+                  </noscript>
+                </span>
             </figure>
             <ul class="thumbnails col-1">
-                <li><a href=""><img src="http://placehold.it/73x73"></a></li>
-                <li><a href=""><img src="http://placehold.it/73x73"></a></li>
-                <li><a href=""><img src="http://placehold.it/73x73"></a></li>
+                <li><a href="#"><img src="images/products/thumbnails/P1-thumb1.jpg"></a></li>
+                <li><a href="#"><img src="images/products/thumbnails/P1-thumb2.jpg"></a></li>
+                <li><a href="#"><img src="images/products/thumbnails/P1-thumb3.jpg"></a></li>
             </ul>
         </div>
         <div class="col-1 col-m-1-of-2">
@@ -93,49 +101,39 @@
         <h2 class="icon-padding icon-gift">Related Products</h2>
     </header>
     <ul class="col-1 bg-white">
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P2-block.jpg"/>
             <div><h4>Stripe Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P3-block.jpg"/>
             <div><h4>Crest Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P4-block.jpg"/>
             <div><h4>Black Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P5-block.jpg"/>
             <div><h4>Nice Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P6-block.jpg"/>
             <div><h4>Triangle Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P7-block.jpg"/>
             <div><h4>Bored Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P8-block.jpg"/>
             <div><h4>Ziggy Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P9-block.jpg"/>
             <div><h4>Red Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P10-block.jpg"/>
             <div><h4>Lips Top</h4></div>
         </a></li>
-        <li><a href="#"><img src="http://placehold.it/199x199"/>
-
+        <li><a href="#"><img src="images/products/thumbnails/P11-block.jpg"/>
             <div><h4>Flower Top</h4></div>
         </a></li>
     </ul>
 </div>
-<div class="row reviews section">
+<div id="reviews" class="row reviews section">
     <header class="col-1">
         <h2 class="icon-padding icon-bubble">Reviews</h2>
     </header>
@@ -243,6 +241,7 @@
         Just a demo...
     </footer>
 </div>
+<script src="scripts/picturefill.js"></script>
 <%=browserSyncScripts%>
 </body>
 </html>
