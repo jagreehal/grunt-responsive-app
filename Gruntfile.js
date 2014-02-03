@@ -34,8 +34,19 @@ module.exports = function(grunt){
 			all: [
 				'Gruntfile.js'
 			]
+		},
+		watch: {
+			grunt: { files: ['Gruntfile.js'] },
+			livereload: {
+				options: {
+					livereload: '<%= config.livereload %>'
+				},
+				files: [
+					'<%= directories.app %>/index.html'
+				]
+			}
 		}
 	});
 
-	grunt.registerTask('default', ['jshint', 'connect:server:keepalive']);
+	grunt.registerTask('default', ['jshint', 'connect', 'watch']);
 };
