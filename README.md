@@ -13,5 +13,7 @@ grunt-responsive-app
 * v0.0.2 - PROBLEM: need to create server that can be accessed by devices on the same network
 	* grunt-contrib-connect
 
-* v0.0.3 - PROBLEM: need to sync across devices
+* v0.0.3 - PROBLEM: need to sync HTML across devices
 	* grunt-contrib-watch
+	
+* v0.0.4 - PROBLEM: need to sync CSS across devices
