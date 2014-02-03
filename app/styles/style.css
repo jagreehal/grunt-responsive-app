@@ -659,6 +659,18 @@ body {
 	background-color: #ff851b;
 }
 
+.site-title .icon-lightning {
+	background-position: left;
+	display: inline-block;
+	padding-left: 30px;
+	padding-left: 3rem;
+}
+
+.icon-padding {
+	padding-left: 30px;
+	padding-left: 3rem;
+}
+
 /*
 product
 */
@@ -690,7 +702,7 @@ product
 }
 
 .product .rating {
-	display: none;
+	display: inline-block;
 	font-size: 12px;
 	font-size: 1.2rem;
 	vertical-align: middle;

@@ -55,6 +55,28 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		grunticon: {
+			iconify: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= directories.app %>/images/icons-src',
+						src: ['*.svg', '*.png'],
+						dest: '<%= directories.app %>/styles/icons'
+					}
+				]
+			}
+		},
+		injectBrowserSync: {
+			dev: {
+				files: '<script src="//<%= config.hostname %>:3000/socket.io/socket.io.js"></script>' +
+					'<script>var ___socket___ = io.connect("http://<%= config.hostname %>:3000")</script>' +
+					'<script src="//<%= config.hostname %>:3001/client/browser-sync-client.min.js"></script>'
+			},
+			dist: {
+				files: ''
+			}
+		},
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc',
@@ -89,16 +111,6 @@ module.exports = function(grunt){
 					'<%= directories.app %>/index.html'
 				]
 			}
-		},
-		injectBrowserSync: {
-			dev: {
-				files: '<script src="//<%= config.hostname %>:3000/socket.io/socket.io.js"></script>' +
-					'<script>var ___socket___ = io.connect("http://<%= config.hostname %>:3000")</script>' +
-					'<script src="//<%= config.hostname %>:3001/client/browser-sync-client.min.js"></script>'
-			},
-			dist: {
-				files: ''
-			}
 		}
 	});
 
@@ -108,5 +120,5 @@ module.exports = function(grunt){
 		grunt.file.write('app/index.html', output);
 	});
 
-	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'connect', 'browser_sync', 'watch']);
+	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer','grunticon', 'connect', 'browser_sync', 'watch']);
 };
