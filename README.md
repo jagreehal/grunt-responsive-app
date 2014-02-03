@@ -25,3 +25,5 @@ grunt-responsive-app
 * v0.0.8 - PROBLEM: Vendor prefixes. Need a mix-in alternative.
 	* grunt-autoprefixer
 * v0.0.9 - PROBLEM: LESS file becoming messy. SOLUTION: use imports!
+* v0.0.10 - PROBLEM: Reloading CSS causes reload injection would be better. SOLUTION: Browser sync with fix until this is resolved https://github.com/shakyShane/grunt-browser-sync/issues/11
+	* grunt-browser-sync
