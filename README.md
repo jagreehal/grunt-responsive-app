@@ -45,3 +45,5 @@ grunt-responsive-app
 	* grunt-contrib-cssmin
 	* grunt-contrib-concat
 	* grunt-smushit
+* v0.0.18 - PROBLEM: Browsers are caching out of date files SOLUTION: Modify files after every build	
+	* grunt-rev

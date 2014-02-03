@@ -1,6 +1,6 @@
 {
 	"name": "grunt-responsive-app",
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"description": "How to build a responsive web app using Grunt",
 	"main": "index.js",
 	"scripts": {
@@ -42,6 +42,7 @@
 		"grunt-contrib-htmlmin": "~0.1.3",
 		"grunt-contrib-cssmin": "~0.7.0",
 		"grunt-contrib-concat": "~0.3.0",
-		"grunt-smushit": "~1.1.2"
+		"grunt-smushit": "~1.1.2",
+		"grunt-rev": "~0.1.0"
 	}
 }

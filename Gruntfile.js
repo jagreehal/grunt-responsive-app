@@ -184,6 +184,17 @@ module.exports = function(grunt){
 				dest: '<%= directories.app %>/images/products/main'
 			}
 		},
+		rev: {
+			dist: {
+				files: {
+					src: [
+						'<%= directories.dist %>/scripts/{,*/}*.js',
+						'<%= directories.dist %>/styles/**/*.css',
+						'<%= directories.dist %>/images/**/*.{gif,jpeg,jpg,png,webp}'
+					]
+				}
+			}
+		},
 		smushit: {
 			main: {
 				files: [
@@ -270,12 +281,13 @@ module.exports = function(grunt){
 		'less',
 		'cmq',
 		'autoprefixer',
+		'copy:dist',
 		'useminPrepare',
 		'concat',
 		'uglify',
 		'cssmin',
-		'usemin',
-		'copy:dist'
+		'rev',
+		'usemin'
 	]);
 
 	grunt.registerTask('bad', [
