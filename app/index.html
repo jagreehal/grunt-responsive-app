@@ -8,7 +8,6 @@
     <!-- build:css styles/style.css -->
     <link rel="stylesheet" href="styles/style.css"/>
     <!-- endbuild -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
         window.grunticon = function(e){
             if(e && 3 === e.length){
@@ -270,7 +269,8 @@
     </footer>
 </div>
 </div>
-<!-- build:js scripts/vendor.js -->
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
 <script src="scripts/picturefill.js"></script>
 <script src="scripts/echo.js"></script>
 <!-- endbuild -->
@@ -279,19 +279,8 @@
         offset: 100,
         throttle: 250
     });
-    var mapOptions = {
-        zoom: 15,
-        center: new google.maps.LatLng(52.205337000000000000, 0.121816999999964540)
-    };
+    loadMap();
 
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(52.205337000000000000, 0.121816999999964540),
-        map: map,
-        title: "Socket Shop!"
-    });
 </script>
 <script src="//192.168.0.6:3000/socket.io/socket.io.js"></script><script>var ___socket___ = io.connect("http://192.168.0.6:3000")</script><script src="//192.168.0.6:3001/client/browser-sync-client.min.js"></script>
 </body>
