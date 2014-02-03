@@ -57,3 +57,5 @@ grunt-responsive-app
 	* time-grunt
 * v0.0.23 - PROBLEM: I want to improve the build time. SOLUTION: run things concurrently!
 	* grunt-concurrent
+* v0.0.24 - PROBLEM: I want to improve the 'above the fold content'. SOLUTION: lazy load images!
+	* use echo.js

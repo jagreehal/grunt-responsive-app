@@ -116,7 +116,8 @@ module.exports = function(grunt){
 						src: [
 							'*.{ico}',
 							'styles/icons/*.css',
-							'styles/icons/png/*.png'
+							'styles/icons/png/*.png',
+							'images/blank.gif'
 						]
 					}
 				]
