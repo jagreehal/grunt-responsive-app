@@ -34,3 +34,14 @@ grunt-responsive-app
 * v0.0.15 - PROBLEM: I want to use icons!. SOLUTION: Grunticon!
 	* grunt-grunticon	 
 * v0.0.16 - PROBLEM: I want images... responsive ones!	* grunt-responsive-images
+* v0.0.17 - PROBLEM: My html, css, js and images are bloated! SOLUTION: Compress	* grunt-contrib-clean
+	* grunt-usemin
+	* grunt-contrib-uglify
+	* grunt-concurrent
+	* grunt-contrib-copy
+	* grunt-contrib-imagemin (jpeg issues)
+	* grunt-svgmin
+	* grunt-contrib-htmlmin
+	* grunt-contrib-cssmin
+	* grunt-contrib-concat
+	* grunt-smushit

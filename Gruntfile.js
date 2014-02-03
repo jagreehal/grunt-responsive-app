@@ -30,6 +30,19 @@ module.exports = function(grunt){
 				pushTo: 'https://github.com/jagreehal/grunt-responsive-app'
 			}
 		},
+		clean: {
+			dist: {
+				files: [
+					{
+						dot: true,
+						src: [
+							'<%= directories.dist %>/*',
+							'.tmp'
+						]
+					}
+				]
+			}
+		},
 		cmq: {
 			options: {
 				log: true
@@ -55,6 +68,36 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		copy: {
+			bad: {
+				files: [
+					{
+						expand: true,
+						dot: true,
+						cwd: '<%= directories.app %>',
+						dest: '<%= directories.dist %>',
+						src: [
+							'**/*.*'
+						]
+					}
+				]
+			},
+			dist: {
+				files: [
+					{
+						expand: true,
+						dot: true,
+						cwd: '<%= directories.app %>',
+						dest: '<%= directories.dist %>',
+						src: [
+							'*.{ico}',
+							'styles/icons/*.css',
+							'styles/icons/png/*.png'
+						]
+					}
+				]
+			}
+		},
 		grunticon: {
 			iconify: {
 				files: [
@@ -63,6 +106,30 @@ module.exports = function(grunt){
 						cwd: '<%= directories.app %>/images/icons-src',
 						src: ['*.svg', '*.png'],
 						dest: '<%= directories.app %>/styles/icons'
+					}
+				]
+			}
+		},
+		htmlmin: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= directories.app %>',
+						src: 'index.html',
+						dest: '<%= directories.dist %>'
+					}
+				]
+			}
+		},
+		imagemin: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= directories.app %>/images',
+						src: ['products/main/*.{gif,jpeg,jpg,png}', 'products/thumbnails/*.{gif,jpeg,jpg,png}'],
+						dest: '<%= directories.dist %>/images'
 					}
 				]
 			}
@@ -117,6 +184,51 @@ module.exports = function(grunt){
 				dest: '<%= directories.app %>/images/products/main'
 			}
 		},
+		smushit: {
+			main: {
+				files: [
+					{
+						expand: true,
+						src: ['<%= directories.app %>/images/products/main/*.{gif,jpeg,jpg,png}'],
+						dest: '<%= directories.dist %>/images/products/main'
+					}
+				]
+			},
+			thumbnails: {
+				files: [
+					{
+						expand: true,
+						src: ['<%= directories.app %>/images/products/thumbnails/*.{gif,jpeg,jpg,png}'],
+						dest: '<%= directories.dist %>/images/products/thumbnails'
+					}
+				]
+			}
+		},
+		svgmin: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= directories.app %>/icons-src',
+						src: '{,*/}*.svg',
+						dest: '<%= directories.app %>/icons-src'
+					}
+				]
+			}
+		},
+		useminPrepare: {
+			options: {
+				dest: '<%= directories.dist %>'
+			},
+			html: '<%= directories.app %>/index.html'
+		},
+		usemin: {
+			options: {
+				assetsDirs: ['<%= directories.dist %>']
+			},
+			html: ['<%= directories.dist %>/{,*/}*.html'],
+			css: ['<%= directories.dist %>/styles/*.css']
+		},
 		watch: {
 			grunt: { files: ['Gruntfile.js'] },
 			html: {
@@ -143,6 +255,40 @@ module.exports = function(grunt){
 		var output = grunt.template.process(template, {data: {'browserSyncScripts': this.data.files}});
 		grunt.file.write('app/index.html', output);
 	});
+
+	grunt.registerTask('build', [
+		'jshint',
+		'clean:dist',
+		'grunticon',
+		'responsive_images',
+		'injectBrowserSync:dist',
+		'useminPrepare',
+		'less',
+		'smushit',
+		'svgmin',
+		'htmlmin',
+		'less',
+		'cmq',
+		'autoprefixer',
+		'useminPrepare',
+		'concat',
+		'uglify',
+		'cssmin',
+		'usemin',
+		'copy:dist'
+	]);
+
+	grunt.registerTask('bad', [
+		'jshint',
+		'clean:dist',
+		'grunticon',
+		'responsive_images',
+		'injectBrowserSync:dist',
+		'less',
+		'less',
+		'autoprefixer',
+		'copy:bad'
+	]);
 
 	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'grunticon', 'connect', 'browser_sync', 'watch']);
 };
