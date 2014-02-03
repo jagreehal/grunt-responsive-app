@@ -45,5 +45,7 @@ grunt-responsive-app
 	* grunt-contrib-cssmin
 	* grunt-contrib-concat
 	* grunt-smushit
-* v0.0.18 - PROBLEM: Browsers are caching out of date files SOLUTION: Modify files after every build	
+* v0.0.18 - PROBLEM: Browsers are caching out of date files. SOLUTION: Modify files after every build	
 	* grunt-rev
+* v0.0.19 - PROBLEM: I need to know if how performant my page is. SOLUTION: Use phantoms to run yslow script	
+	* grunt-exec

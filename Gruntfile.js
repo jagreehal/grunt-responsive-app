@@ -59,12 +59,19 @@ module.exports = function(grunt){
 				livereload: '<%= config.livereload %>',
 				hostname: '<%= config.hostname %>'
 			},
-			server: {
+			livereload: {
 				options: {
 					open: true,
 					base: [
 						'<%= directories.app %>'
 					]
+				}
+			},
+			dist: {
+				options: {
+					open: true,
+					base: '<%= directories.dist %>',
+					livereload: false
 				}
 			}
 		},
@@ -96,6 +103,11 @@ module.exports = function(grunt){
 						]
 					}
 				]
+			}
+		},
+		exec: {
+			phantomjs: {
+				cmd: 'phantomjs yslow.js --info basic --format plain http://<%= config.hostname %>:<%= config.port %>'
 			}
 		},
 		grunticon: {
@@ -287,7 +299,9 @@ module.exports = function(grunt){
 		'uglify',
 		'cssmin',
 		'rev',
-		'usemin'
+		'usemin',
+		'connect:dist',
+		'exec'
 	]);
 
 	grunt.registerTask('bad', [
@@ -302,5 +316,7 @@ module.exports = function(grunt){
 		'copy:bad'
 	]);
 
-	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'grunticon', 'connect', 'browser_sync', 'watch']);
+	grunt.registerTask('yslow', ['connect:dist','exec']);
+
+	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'grunticon', 'connect:livereload', 'browser_sync', 'watch']);
 };
