@@ -172,6 +172,15 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		phantomas: {
+			run: {
+				options: {
+					indexPath: 'phantomas/',
+					options: {},
+                    url       : 'http://<%= config.hostname %>:<%= config.port %>'
+				}
+			}
+		},
 		responsive_images: {
 			options: {
 				sizes: [
@@ -301,7 +310,8 @@ module.exports = function(grunt){
 		'rev',
 		'usemin',
 		'connect:dist',
-		'exec'
+		'exec',
+		'phantomas'
 	]);
 
 	grunt.registerTask('bad', [
@@ -317,6 +327,9 @@ module.exports = function(grunt){
 	]);
 
 	grunt.registerTask('yslow', ['connect:dist','exec']);
+
+	grunt.registerTask('run-phantomas', ['connect:dist', 'phantomas']);
+
 
 	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'grunticon', 'connect:livereload', 'browser_sync', 'watch']);
 };

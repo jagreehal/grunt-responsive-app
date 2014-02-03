@@ -49,3 +49,5 @@ grunt-responsive-app
 	* grunt-rev
 * v0.0.19 - PROBLEM: I need to know if how performant my page is. SOLUTION: Use phantoms to run yslow script	
 	* grunt-exec
+* v0.0.20 - PROBLEM: I want to be able to compare performance after every build. SOLUTION: Use phantomas to capture metrics	
+	* grunt-phantomas
