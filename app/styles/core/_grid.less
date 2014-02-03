@@ -1,0 +1,30 @@
+@import "_mixins";
+@import "_breakpoints";
+
+.row {
+  width: 100%;
+  margin: 0 auto
+}
+
+/* Clearfix */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* Attribute selector */
+[class*='col-'] {
+  float: left;
+  .padding(8px);
+}
+
+.col-1 {
+  width: 100%;
+}
+
+@media @bp-m {
+  .col-m-1-of-3 {
+    width: 33.3%;
+  }
+}

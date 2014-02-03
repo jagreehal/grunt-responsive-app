@@ -27,3 +27,4 @@ grunt-responsive-app
 * v0.0.9 - PROBLEM: LESS file becoming messy. SOLUTION: use imports!
 * v0.0.10 - PROBLEM: Reloading CSS causes reload injection would be better. SOLUTION: Browser sync with fix until this is resolved https://github.com/shakyShane/grunt-browser-sync/issues/11
 	* grunt-browser-sync
+* v0.0.11 - PROBLEM: I need a flexible grid (without a framework!). SOLUTION: Grids don't overthink it! Also mixin for REM, debug and normalize
