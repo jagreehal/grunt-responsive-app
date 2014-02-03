@@ -59,3 +59,4 @@ grunt-responsive-app
 	* grunt-concurrent
 * v0.0.24 - PROBLEM: I want to improve the 'above the fold content'. SOLUTION: lazy load images!
 	* use echo.js
+* v0.0.25 - PROBLEM: I want to add google maps for find us. 

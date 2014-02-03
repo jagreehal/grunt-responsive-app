@@ -20,6 +20,14 @@ html, body {
   .padding-left(30px);
 }
 
+.section {
+  border-top: 1px solid @black;
+  h2 {
+    margin: 0;
+    .min-height(20px);
+  }
+}
+
 /*
 product
 */
@@ -66,13 +74,7 @@ product
     .line-height(18px);
   }
 
-  .section {
-    border-top: 1px solid @black;
-    h2 {
-      margin: 0;
-      .min-height(20px);
-    }
-  }
+
 
   .button {
     padding: 0;
@@ -191,6 +193,8 @@ product
   }
 
   .reviews {
+    .margin-bottom(10px);
+
     h3, h4, p {
       padding: 0;
       margin: 0;
@@ -222,6 +226,11 @@ product
       width: 73px;
       height: 73px;
     }
+  }
+}
 
+.map {
+  #map-canvas {
+    height: 320px;
   }
 }
