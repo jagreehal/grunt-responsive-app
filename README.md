@@ -9,3 +9,6 @@ grunt-responsive-app
 	* jshint-stylish
 	* load-grunt-tasks
 	* grunt-bump
+	
+* v0.0.2 - PROBLEM: need to create server that can be accessed by devices on the same network
+	* grunt-contrib-connect

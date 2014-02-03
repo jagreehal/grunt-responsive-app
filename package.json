@@ -1,27 +1,28 @@
 {
-  "name": "grunt-responsive-app",
-  "version": "0.0.1",
-  "description": "How to build a responsive web app using Grunt",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jagreehal/grunt-responsive-app"
-  },
-  "author": "",
-  "license": "BSD",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/jagreehal/grunt-responsive-app/issues"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.8.0",
-    "jshint-stylish": "~0.1.5",
-    "load-grunt-tasks": "~0.3.0",
-    "grunt-bump": "0.0.13"
-  }
+	"name": "grunt-responsive-app",
+	"version": "0.0.2",
+	"description": "How to build a responsive web app using Grunt",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jagreehal/grunt-responsive-app"
+	},
+	"author": "",
+	"license": "BSD",
+	"readmeFilename": "README.md",
+	"bugs": {
+		"url": "https://github.com/jagreehal/grunt-responsive-app/issues"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "~0.4.2",
+		"grunt-contrib-jshint": "~0.8.0",
+		"jshint-stylish": "~0.1.5",
+		"load-grunt-tasks": "~0.3.0",
+		"grunt-bump": "0.0.13",
+		"grunt-contrib-connect": "~0.6.0"
+	}
 }

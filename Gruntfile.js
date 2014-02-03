@@ -1,9 +1,7 @@
 'use strict';
 module.exports = function(grunt){
-	// Load all tasks
 	require('load-grunt-tasks')(grunt);
 
-	// Project configuration.
 	grunt.initConfig({
 		directories: {app: 'app', dist: 'dist'},
 		config: grunt.file.readJSON('config.json'),
@@ -11,6 +9,21 @@ module.exports = function(grunt){
 			options: {
 				commitFiles: ['-a'],
 				pushTo: 'https://github.com/jagreehal/grunt-responsive-app'
+			}
+		},
+		connect: {
+			options: {
+				port: '<%= config.port %>',
+				livereload: '<%= config.livereload %>',
+				hostname: '<%= config.hostname %>'
+			},
+			server: {
+				options: {
+					open: true,
+					base: [
+						'<%= directories.app %>'
+					]
+				}
 			}
 		},
 		jshint: {
@@ -24,5 +37,5 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('default', ['jshint']);
+	grunt.registerTask('default', ['jshint', 'connect:server:keepalive']);
 };
