@@ -194,7 +194,7 @@ module.exports = function(grunt){
 				options: {
 					indexPath: 'phantomas/',
 					options: {},
-                    url       : 'http://<%= config.hostname %>:<%= config.port %>'
+					url: 'http://<%= config.hostname %>:<%= config.port %>'
 				}
 			}
 		},
@@ -296,6 +296,11 @@ module.exports = function(grunt){
 					'<%= directories.app %>/index.html'
 				]
 			}
+		},
+		concurrent: {
+			createImages: ['grunticon', 'responsive_images'],
+			smushit: ['smushit:main', 'smushit:thumbnails'],
+			postBuild: ['exec', 'autoshot', 'phantomas']
 		}
 	});
 
@@ -308,12 +313,11 @@ module.exports = function(grunt){
 	grunt.registerTask('build', [
 		'jshint',
 		'clean:dist',
-		'grunticon',
-		'responsive_images',
+		'concurrent:createImages',
 		'injectBrowserSync:dist',
 		'useminPrepare',
 		'less',
-		'smushit',
+		'concurrent:smushit',
 		'svgmin',
 		'htmlmin',
 		'less',
@@ -327,9 +331,7 @@ module.exports = function(grunt){
 		'rev',
 		'usemin',
 		'connect:dist',
-		'exec',
-		'phantomas',
-		'autoshot'
+		'concurrent:postBuild'
 	]);
 
 	grunt.registerTask('bad', [
@@ -344,7 +346,7 @@ module.exports = function(grunt){
 		'copy:bad'
 	]);
 
-	grunt.registerTask('yslow', ['connect:dist','exec']);
+	grunt.registerTask('yslow', ['connect:dist', 'exec']);
 
 	grunt.registerTask('run-phantomas', ['connect:dist', 'phantomas']);
 

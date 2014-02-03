@@ -55,3 +55,5 @@ grunt-responsive-app
 	* grunt-autoshot
 * v0.0.22 - PROBLEM: I want to know how long my grunt tasks are taking
 	* time-grunt
+* v0.0.23 - PROBLEM: I want to improve the build time. SOLUTION: run things concurrently!
+	* grunt-concurrent

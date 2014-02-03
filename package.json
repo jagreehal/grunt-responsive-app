@@ -1,6 +1,6 @@
 {
 	"name": "grunt-responsive-app",
-	"version": "0.0.22",
+	"version": "0.0.23",
 	"description": "How to build a responsive web app using Grunt",
 	"main": "index.js",
 	"scripts": {
