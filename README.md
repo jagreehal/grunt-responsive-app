@@ -53,3 +53,5 @@ grunt-responsive-app
 	* grunt-phantomas
 * v0.0.21 - PROBLEM: I want to screenshots of the page after every build. 
 	* grunt-autoshot
+* v0.0.22 - PROBLEM: I want to know how long my grunt tasks are taking
+	* time-grunt
