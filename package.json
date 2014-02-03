@@ -1,6 +1,6 @@
 {
 	"name": "grunt-responsive-app",
-	"version": "0.0.20",
+	"version": "0.0.21",
 	"description": "How to build a responsive web app using Grunt",
 	"main": "index.js",
 	"scripts": {
@@ -45,6 +45,7 @@
 		"grunt-smushit": "~1.1.2",
 		"grunt-rev": "~0.1.0",
 		"grunt-exec": "~0.4.3",
-		"grunt-phantomas": "~0.5.1"
+		"grunt-phantomas": "~0.5.1",
+		"grunt-autoshot": "~0.1.0"
 	}
 }

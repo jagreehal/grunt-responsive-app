@@ -51,3 +51,5 @@ grunt-responsive-app
 	* grunt-exec
 * v0.0.20 - PROBLEM: I want to be able to compare performance after every build. SOLUTION: Use phantomas to capture metrics	
 	* grunt-phantomas
+* v0.0.21 - PROBLEM: I want to screenshots of the page after every build. 
+	* grunt-autoshot

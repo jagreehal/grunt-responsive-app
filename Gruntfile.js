@@ -15,6 +15,20 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		autoshot: {
+			default_options: {
+				options: {
+					path: 'screenshots/',
+					// optional config, must set either remote or local
+					remote: {
+						files: [
+							{ src: 'http://<%= config.hostname %>:<%= config.port %>', dest: 'screenshot.png' }
+						]
+					},
+					viewport: ['320x480', '768x1024', '1024x1080']
+				}
+			}
+		},
 		browser_sync: {
 			bsFiles: {
 				src: '<%= directories.app %>/styles/style.css'
@@ -311,7 +325,8 @@ module.exports = function(grunt){
 		'usemin',
 		'connect:dist',
 		'exec',
-		'phantomas'
+		'phantomas',
+		'autoshot'
 	]);
 
 	grunt.registerTask('bad', [
@@ -330,6 +345,7 @@ module.exports = function(grunt){
 
 	grunt.registerTask('run-phantomas', ['connect:dist', 'phantomas']);
 
+	grunt.registerTask('screenshots', ['connect:dist', 'autoshot']);
 
 	grunt.registerTask('default', ['injectBrowserSync:dev', 'jshint', 'less', 'cmq', 'autoprefixer', 'grunticon', 'connect:livereload', 'browser_sync', 'watch']);
 };

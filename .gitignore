@@ -1,5 +1,7 @@
 .idea/
 node_modules/
 config.json
-dist
-.tmp
+dist.
+.tmp/
+phantomas/
+screenshots/
