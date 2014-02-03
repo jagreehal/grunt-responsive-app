@@ -11,6 +11,16 @@ module.exports = function(grunt){
 				pushTo: 'https://github.com/jagreehal/grunt-responsive-app'
 			}
 		},
+		cmq: {
+			options: {
+				log: true
+			},
+			combine: {
+				files: {
+					'<%= directories.app %>/styles/style.css': '<%= directories.app %>/styles/style.css'
+				}
+			}
+		},
 		connect: {
 			options: {
 				port: '<%= config.port %>',
@@ -46,7 +56,7 @@ module.exports = function(grunt){
 			grunt: { files: ['Gruntfile.js'] },
 			less: {
 				files: ['<%= directories.app %>/styles/**/*.less'],
-				tasks: ['less']
+				tasks: ['less','cmq'] // only for demo purposes don't cmq after every change!
 			},
 			livereload: {
 				options: {
@@ -60,5 +70,5 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('default', ['jshint', 'less', 'connect', 'watch']);
+	grunt.registerTask('default', ['jshint', 'less', 'cmq', 'connect', 'watch']);
 };

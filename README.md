@@ -20,3 +20,5 @@ grunt-responsive-app
 * v0.0.5 - PROBLEM: want responsive boxes full width 'mobile' otherwise single row 
 * v0.0.6 - PROBLEM: having to repeat breakpoints. SOLUTION: Use LESS variables
 	* grunt-contrib-less
+* v0.0.7 - PROBLEM: embedding media queries bloats CSS. SOLUTION: Combine them together!
+	* grunt-combine-media-queries
