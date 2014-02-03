@@ -1,54 +1,34 @@
-@bp-s: ~"only screen and (min-width: 480px)";
-@bp-m: ~"only screen and (min-width: 768px)";
-@bp-l: ~"only screen and (min-width: 1024px)";
-
-* {
-  box-sizing: border-box;
-}
-
-/*
-FLEX BOX MIXIN!
-
-.flex-display(@display: flex) {
-	display: ~"-webkit-@{display}";
-	display: ~"-moz-@{display}";
-	display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-	display: ~"-ms-@{display}"; // IE11
-	display: @display;
-}
-*/
-
+@import "core/core";
 
 .box {
   width: 100%;
   height: 200px;
   float: left;
   display: flex;
-  //.flex-display;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   color: #FFF;
   @media @bp-s{
     width: 33%;
-    color: #7FDBFF;
+    color: @aqua;
   }
   @media @bp-l{
-    color: #111;
+    color: @black;
   }
 }
 
 .red {
-  background-color: #FF4136;
+  .bg-red;
 }
 
 .orange {
-  background-color: #FF851B;
-  @media @bp-l{
-   background-color: darken(#FF851B, 20%);
+  .bg-orange;
+  @media @bp-m{
+   background-color: darken(@orange, 20%);
   }
 }
 
 .green {
-  background-color: #2ECC40;
+  .bg-green;
 }

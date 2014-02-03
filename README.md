@@ -24,3 +24,4 @@ grunt-responsive-app
 	* grunt-combine-media-queries
 * v0.0.8 - PROBLEM: Vendor prefixes. Need a mix-in alternative.
 	* grunt-autoprefixer
+* v0.0.9 - PROBLEM: LESS file becoming messy. SOLUTION: use imports!
