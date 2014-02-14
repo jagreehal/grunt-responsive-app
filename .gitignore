@@ -1,0 +1,7 @@
+.tmp
+app
+dist
+node_modules
+phantomas
+screenshots
+.idea
