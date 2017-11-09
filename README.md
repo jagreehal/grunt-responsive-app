@@ -1,6 +1,8 @@
 grunt-responsive-app
 ====================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jagreehal/grunt-responsive-app.svg)](https://greenkeeper.io/)
+
 ## Commit Tags as follows!
 
 * v0.0.1 - Added grunt packages to check JavaScript quality, load tasks and commit to GitHub
